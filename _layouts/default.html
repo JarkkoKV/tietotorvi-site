@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title | default: site.title }}</title>
+  <meta name="description" content="{{ page.excerpt | strip_html | strip_newlines | default: site.description }}">
+  <link rel="stylesheet" href="/assets/style.css?v=2">
+  <link rel="icon" href="/assets/img/favicon.png">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/" aria-label="Tietotorvi etusivu">
+        <img src="/assets/img/tietotorvi-logo.png" alt="Tietotorvi – tieto näkyväksi" />
+      </a>
+      <nav class="site-nav">
+        <a href="/uutiset/">Uutiset</a>
+        <a href="/about/">Tietoa</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; {{ site.time | date: "%Y" }} Tietotorvi · <a href="/about/">Ota yhteyttä</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
