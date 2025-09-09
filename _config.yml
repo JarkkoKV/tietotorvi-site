@@ -1,0 +1,8 @@
+title: Tietotorvi
+description: Tieto näkyväksi
+url: https://tietotorvi.fi
+baseurl: ""            # jätä tyhjäksi custom domainille
+markdown: kramdown
+theme: null            # käytetään omaa CSS:ää
+permalink: /:categories/:year/:month/:day/:title/
+timezone: Europe/Helsinki
