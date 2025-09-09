@@ -114,3 +114,10 @@ footer a:hover{ text-decoration:underline; }
 @media (max-width:640px){
   header h1{ font-size:1.7rem; }
 }
+/* Piilotetaan GitHub Pages -teeman header (Cayman / Minimal) */
+.page-header,
+.site-header,
+header.project-header {
+  display: none !important;
+}
+
