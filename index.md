@@ -2,6 +2,7 @@
 layout: default
 title: Tietotorvi – Hyvät uutiset
 ---
+<style>body{background:#ffeecc !important;}</style>
 
 <link rel="stylesheet" href="/assets/style.css?v=1">
 
