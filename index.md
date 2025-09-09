@@ -1,3 +1,8 @@
+---
+layout: default
+title: Tietotorvi – Hyvät uutiset
+---
+
 <link rel="stylesheet" href="assets/style.css">
 
 # Tietotorvi – Hyvät uutiset
