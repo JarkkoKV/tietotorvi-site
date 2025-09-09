@@ -1,6 +1,9 @@
+<link rel="stylesheet" href="assets/style.css">
+
 # Tietotorvi – Hyvät uutiset
 
-Tälle sivulle kokoamme tutkittuun tietoon ja viranomaislähteisiin perustuvia hyviä uutisia.  
+Tälle sivulle kootaan tutkittuun tietoon ja viranomaislähteisiin perustuvia hyviä uutisia.
+Tehdään tieto näkyväksi ja rakennetaan tulevaisuutta tietoon tukeutuen.
 Seuraa myös Telegramissa: **Jarkon Tietotorvi – Hyvät uutiset**.
 
 ## Uusimmat jutut
