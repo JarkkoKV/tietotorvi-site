@@ -1,23 +1,28 @@
 <!doctype html>
 <html lang="fi">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{{ page.title | default: site.title }}</title>
-  <meta name="description" content="{{ page.excerpt | strip_html | strip_newlines | default: site.description }}">
-  <link rel="stylesheet" href="/assets/style.css?v=3">
-  <link rel="icon" href="/assets/img/favicon.png">
+  <meta name="description" content="{{ page.excerpt | strip_html | strip_newlines | default: site.description }}" />
+  <link rel="stylesheet" href="/assets/style.css?v=3" />
+  <link rel="icon" href="/assets/img/favicon.png" />
+  <!-- (Valinnainen) Open Sans Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <!-- HEADER -->
   <header class="site-header">
-    <div class="wrap">
+    <div class="wrap header-inner">
       <a class="brand" href="/" aria-label="Tietotorvi etusivu">
         <img src="/assets/img/tietotorvi-logo.png" alt="Tietotorvi – tieto näkyväksi" />
       </a>
       <nav class="site-nav">
         <a href="/uutiset/">Uutiset</a>
+        <a href="https://tietotorvi.substack.com" target="_blank" rel="noopener">Tilaa</a>
         <a href="/about/">Tietoa</a>
       </nav>
     </div>
@@ -29,7 +34,7 @@
 
   <footer class="site-footer">
     <div class="wrap">
-      <p>&copy; {{ site.time | date: "%Y" }} Tietotorvi · <a href="/about/">Ota yhteyttä</a></p>
+      <p>© {{ site.time | date: "%Y" }} Tietotorvi · <a href="/about/">Ota yhteyttä</a></p>
     </div>
   </footer>
 
