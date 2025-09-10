@@ -128,6 +128,7 @@ html,body{
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: center center, center center, right 3% bottom;
   background-size: cover, cover, min(42vw, 520px) auto; /* torven koko */
+  outline: 4px solid magenta;
 }
 
 /* Mobiilissa torvi pois, pelkkä gradientti + voimakkaampi overlay */
