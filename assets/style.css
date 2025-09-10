@@ -118,23 +118,25 @@ html,body{
   .post-grid .article-card{ grid-column: span 4; }
 }
 
-/* ====== HERO – variantti jossa torvi taustalla ====== */
-.hero--with-illustration{
-  /* Järjestys: 1) overlay (päällimmäinen), 2) torvi, 3) gradientti (alin) */
+/* ===== Hero – torvi pienemmäksi ja ylemmäs (pakotettu versio) ===== */
+.hero.hero--with-illustration{
+  /* kerrosjärjestys: overlay (ylin), torvi, gradientti (alin) */
   background-image:
     linear-gradient(135deg, rgba(0,0,0,.22), rgba(0,0,0,.18)),
     url('/assets/img/torvi-hero.png'),
     linear-gradient(135deg, #0aa2b0 0%, #37b3be 35%, #f6a25e 100%);
   background-repeat: no-repeat, no-repeat, no-repeat;
+  /* nosta ja pienennä torvea */
   background-position: center center, right 4% top 30%, center center;
   background-size: cover, min(36vw, 440px) auto, cover;
 }
 
-/* Mobiilissa torvi pois, pelkkä gradientti + voimakkaampi overlay */
+/* Mobiilissa torvi pois, vahvempi overlay */
 @media (max-width: 680px){
-  .hero--with-illustration{
+  .hero.hero--with-illustration{
     background-image:
       linear-gradient(135deg, rgba(0,0,0,.26), rgba(0,0,0,.22)),
       linear-gradient(135deg, #0aa2b0 0%, #37b3be 35%, #f6a25e 100%);
   }
 }
+
