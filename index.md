@@ -2,38 +2,34 @@
 layout: default
 title: Tietotorvi – Hyvät uutiset
 ---
-<style>body{background:#ffeecc !important;}</style>
 
-<link rel="stylesheet" href="/assets/style.css?v=1">
-
-<div class="main">
-  <div class="article-card">
-    <h2 class="section-title">Tietotorvi – Hyvät uutiset</h2>
-    <p>Tälle sivulle kootaan tutkittuun tietoon ja viranomaislähteisiin perustuvia hyviä uutisia. 
-    Tehdään tieto näkyväksi ja rakennetaan tulevaisuutta tietoon tukeutuen.</p>
+<!-- HERO -->
+<div class="hero">
+  <div class="hero__image">
+    <img src="/assets/img/hero-bg.jpg" alt="Abstrakti tausta – Tieto näkyväksi" />
   </div>
-
-  <h2 class="section-title">Uusimmat jutut</h2>
-  <div class="article-card">
-    <a href="/posts/2025-09-08-testijuttu.md">Testijuttu</a>
-  </div>
-
-  <h2 class="section-title">Tilaus</h2>
-  <div class="info">
-    <p>Haluatko uutiset sähköpostiisi? Tilaa uutiskirje: 
-    <a href="https://tietotorvi.substack.com" target="_blank">tietotorvi.substack.com</a></p>
+  <div class="hero__overlay"></div>
+  <div class="hero__content">
+    <h1>Tietotorvi – Hyvät uutiset</h1>
+    <p>Tälle sivulle kootaan tutkittuun tietoon ja viranomaislähteisiin perustuvia hyviä uutisia. Tehdään tieto näkyväksi ja rakennetaan tulevaisuutta tietoon tukeutuen.</p>
   </div>
 </div>
 
-# Tietotorvi – Hyvät uutiset
+<section class="wrap" style="margin-top: 16px;">
+  <h2>Uusimmat jutut</h2>
+  <ul>
+    {% for post in site.posts limit:5 %}
+      <li style="margin: 0 0 10px 0;">
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        <small> · {{ post.date | date: "%d.%m.%Y" }}</small>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
 
-Tälle sivulle kootaan tutkittuun tietoon ja viranomaislähteisiin perustuvia hyviä uutisia.
-Tehdään tieto näkyväksi ja rakennetaan tulevaisuutta tietoon tukeutuen.
-Seuraa myös Telegramissa: **Jarkon Tietotorvi – Hyvät uutiset**.
-
-## Uusimmat jutut
-
-- [Testijuttu](/posts/2025-09-08-testijuttu.md)
-
-## Tilaus
-Haluatko uutiset sähköpostiisi? Tilaa uutiskirje: [tietotorvi.substack.com](https://tietotorvi.substack.com)
+<section class="wrap" style="margin-top: 24px;">
+  <h2>Tilaus</h2>
+  <div class="card" style="margin-top: 8px;">
+    Haluatko uutiset sähköpostiisi? Tilaa uutiskirje: <a href="https://tietotorvi.substack.com">tietotorvi.substack.com</a>
+  </div>
+</section>
