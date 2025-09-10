@@ -4,7 +4,7 @@ title: Tietotorvi – Hyvät uutiset
 ---
 
 <!-- HERO -->
-<section class="hero hero--with-illustration">
+<section class="hero hero--with-illustration is-placed">
   <div class="wrap">
     <div class="hero_content">
       <h1>Tietotorvi – Hyvät uutiset</h1>
