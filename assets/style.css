@@ -119,29 +119,23 @@ html,body{
 }
 
 /* ===== Hero – torvi pienemmäksi ja ylemmäs (pakotettu versio) ===== */
-.hero.hero--with-illustration{
-  /* kerrosjärjestys: overlay (ylin), torvi, gradientti (alin) */
+.hero--with-illustration{
+  /* 1) overlay (ylin), 2) torvi, 3) gradientti (alin) */
   background-image:
     linear-gradient(135deg, rgba(0,0,0,.22), rgba(0,0,0,.18)),
     url('/assets/img/torvi-hero.png'),
     linear-gradient(135deg, #0aa2b0 0%, #37b3be 35%, #f6a25e 100%);
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: center center, right 5% top 48%, center center;
-  background-size: cover, min(28vw, 380px) auto, cover;
-}
-
-/* ===== Hero – torven lopullinen säätö (spesifimpi) ===== */
-.hero.hero--with-illustration.is-placed{
-  background-position: center center, right 5% top 65% !important, center center;
-  background-size: cover, min(28vw, 360px) auto !important, cover;
+  /* siirrä alemmaksi ja pidä hieman pienempänä */
+  background-position: center center, right 5% top 65%, center center;
+  background-size: cover, min(28vw, 360px) auto, cover;
 }
 
 /* Mobiilissa torvi pois, vahvempi overlay */
 @media (max-width: 680px){
-  .hero.hero--with-illustration{
+  .hero--with-illustration{
     background-image:
       linear-gradient(135deg, rgba(0,0,0,.26), rgba(0,0,0,.22)),
       linear-gradient(135deg, #0aa2b0 0%, #37b3be 35%, #f6a25e 100%);
   }
 }
-
