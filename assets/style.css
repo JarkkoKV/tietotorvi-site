@@ -126,9 +126,8 @@ html,body{
     url('/assets/img/torvi-hero.png'),
     linear-gradient(135deg, #0aa2b0 0%, #37b3be 35%, #f6a25e 100%);
   background-repeat: no-repeat, no-repeat, no-repeat;
-  /* nosta ja pienennä torvea */
-  background-position: center center, right 4% top 30%, center center;
-  background-size: cover, min(36vw, 440px) auto, cover;
+  background-position: center center, right 5% top 48%, center center;
+  background-size: cover, min(28vw, 380px) auto, cover;
 }
 
 /* Mobiilissa torvi pois, vahvempi overlay */
