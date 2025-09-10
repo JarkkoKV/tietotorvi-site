@@ -132,7 +132,7 @@ html,body{
 
 /* ===== Hero – torven lopullinen säätö (spesifimpi) ===== */
 .hero.hero--with-illustration.is-placed{
-  background-position: center center, right 5% top 55% !important, center center;
+  background-position: center center, right 5% top 65% !important, center center;
   background-size: cover, min(28vw, 360px) auto !important, cover;
 }
 
