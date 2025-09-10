@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tietotorvi.fi/sitemap.xml
