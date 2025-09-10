@@ -1,8 +1,31 @@
 title: Tietotorvi
 description: Tieto näkyväksi
 url: https://tietotorvi.fi
-baseurl: ""            # jätä tyhjäksi custom domainille
-markdown: kramdown
-theme: null            # käytetään omaa CSS:ää
-permalink: /:categories/:year/:month/:day/:title/
+baseurl: ""            # jätä tyhjäksi custom-domainta varten
+
+# Julkaisuasetukset
 timezone: Europe/Helsinki
+markdown: kramdown
+theme: null            # ei GitHubin valmisteemaa -> käytetään omaa CSS:ää
+permalink: /:categories/:year/:month/:day/:title/
+
+# Plugin-tuki (GitHub Pages tukee näitä suoraan)
+plugins:
+  - jekyll-feed        # /feed.xml
+  - jekyll-sitemap     # /sitemap.xml
+
+# Hyödylliset oletukset
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Tietotorvi"
+      lang: "fi"
+
+# Siivoa buildista turhat
+exclude:
+  - node_modules
+  - README.md
+  - drafts
