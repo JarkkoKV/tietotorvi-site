@@ -7,19 +7,31 @@
   <meta name="description" content="{{ page.excerpt | strip_html | strip_newlines | default: site.description }}" />
   <link rel="stylesheet" href="/assets/style.css?v=3" />
   <link rel="icon" href="/assets/img/favicon.png" />
+
   <!-- (Valinnainen) Open Sans Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-    <!-- Open Graph / sosiaalisen median metat -->
+
+  <!-- Perus-SEO -->
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  <meta name="description" content="{{ page.excerpt | strip_html | strip_newlines | default: site.description }}">
+
+  <!-- Open Graph (sosiaalinen media) -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Tietotorvi">
   <meta property="og:title" content="{{ page.title | default: site.title }}">
   <meta property="og:description" content="{{ page.excerpt | strip_html | strip_newlines | default: site.description }}">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-  <meta property="og:image" content="{{ site.url }}/assets/img/tietotorvi-logo.png">
+  <meta property="og:image" content="{{ site.url }}/assets/img/banner-tietotorvi-1200x630.jpg">
 
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page.title | default: site.title }}">
+  <meta name="twitter:description" content="{{ page.excerpt | strip_html | strip_newlines | default: site.description }}">
+  <meta name="twitter:image" content="{{ site.url }}/assets/img/banner-tietotorvi-1200x630.jpg">
 </head>
+
 <body>
 
   <!-- HEADER -->
