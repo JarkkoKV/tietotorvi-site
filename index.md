@@ -4,32 +4,40 @@ title: Tietotorvi – Hyvät uutiset
 ---
 
 <!-- HERO -->
-<div class="hero">
-  <div class="hero__image">
-    <img src="/assets/img/hero-bg.jpg" alt="Abstrakti tausta – Tieto näkyväksi" />
+<section class="hero">
+  <div class="wrap">
+    <div class="hero_content">
+      <h1>Tietotorvi – Hyvät uutiset</h1>
+      <p>Tälle sivulle kootaan tutkittuun tietoon ja viranomaislähteisiin perustuvia hyviä uutisia. Tehdään tieto näkyväksi ja rakennetaan tulevaisuutta tietoon tukeutuen.</p>
+      <div class="hero_cta">
+        <a class="btn" href="/uutiset/">Lue uusimmat</a>
+        <a class="btn btn-ghost" href="https://tietotorvi.substack.com" target="_blank" rel="noopener">Tilaa uutiskirje</a>
+      </div>
+    </div>
   </div>
-  <div class="hero__overlay"></div>
-  <div class="hero__content">
-    <h1>Tietotorvi – Hyvät uutiset</h1>
-    <p>Tälle sivulle kootaan tutkittuun tietoon ja viranomaislähteisiin perustuvia hyviä uutisia. Tehdään tieto näkyväksi ja rakennetaan tulevaisuutta tietoon tukeutuen.</p>
-  </div>
-</div>
-
-<section class="wrap" style="margin-top: 16px;">
-  <h2>Uusimmat jutut</h2>
-  <ul>
-    {% for post in site.posts limit:5 %}
-      <li style="margin: 0 0 10px 0;">
-        <a href="{{ post.url }}">{{ post.title }}</a>
-        <small> · {{ post.date | date: "%d.%m.%Y" }}</small>
-      </li>
-    {% endfor %}
-  </ul>
 </section>
 
+<!-- UUSIMMAT -->
 <section class="wrap" style="margin-top: 24px;">
-  <h2>Tilaus</h2>
-  <div class="card" style="margin-top: 8px;">
-    Haluatko uutiset sähköpostiisi? Tilaa uutiskirje: <a href="https://tietotorvi.substack.com">tietotorvi.substack.com</a>
+  <h2 class="section-title">Uusimmat jutut</h2>
+  <div class="post-grid">
+  {% for post in site.posts limit: 6 %}
+    <article class="article-card">
+      <h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+      <div class="article-meta">
+        <small>{{ post.date | date: "%d.%m.%Y" }}{% if post.categories and post.categories.size > 0 %} • {{ post.categories | join: ", " }}{% endif %}</small>
+      </div>
+      {% if post.excerpt %}<p>{{ post.excerpt | strip_newlines }}</p>{% endif %}
+      <a class="readmore" href="{{ post.url | prepend: site.baseurl }}">Lue lisää →</a>
+    </article>
+  {% endfor %}
+  </div>
+</section>
+
+<!-- TILAUSLAATIKKO -->
+<section class="wrap" style="margin-top: 24px;">
+  <div class="info">
+    <strong>Haluatko hyvät uutiset sähköpostiisi?</strong>
+    &nbsp;Tilaa uutiskirje: <a href="https://tietotorvi.substack.com" target="_blank" rel="noopener">tietotorvi.substack.com</a>
   </div>
 </section>
